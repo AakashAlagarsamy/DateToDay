@@ -46,16 +46,46 @@ public class MainActivity extends AppCompatActivity {
 
     public String Getdate(int dd, int mm, int yy) {
         int m[]={0,3,3,6,1,4,6,2,5,0,3,5};
-        int a,b,c,e,t,z;
-        if(yy>=2000)
+        int a=0,b,c=0,e,t,z;
+        if(yy>=2000&&yy<2100)
         {
             a=6;
             c=yy-2000;
         }
-        else
+        else if(yy>=1900&&yy<2000)
         {
             a=0;
             c=yy-1900;
+        }
+        else if(yy>=1800&&yy<1900)
+        {
+            a=2;
+            c=yy-1800;
+        }
+        else if(yy>=1700&&yy<1800)
+        {
+            a=4;
+            c=yy-1700;
+        }
+        else if(yy>=1600&&yy<1700)
+        {
+            a=6;
+            c=yy-1600;
+        }
+        else if(yy>=2100&&yy<2200)
+        {
+            a=4;
+            c=yy-2100;
+        }
+        else if(yy>=2200&&yy<2300)
+        {
+            a=2;
+            c=yy-2200;
+        }
+        else if(yy>=2300&&yy<2400)
+        {
+            a=0;
+            c=yy-2300;
         }
         b=m[mm-1];
         e=c/4;
