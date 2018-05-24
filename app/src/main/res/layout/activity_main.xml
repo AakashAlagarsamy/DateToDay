@@ -5,14 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.aakash.datetoday.MainActivity">
-
     <Button
         android:id="@+id/calc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="183dp"
+        android:layout_marginBottom="210dp"
         android:text="Result"
         android:textSize="25sp" />
 
@@ -22,20 +21,21 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="104dp"
+        android:layout_marginBottom="147dp"
         android:text="Day"
+        android:textColor="@color/black"
         android:textSize="36sp" />
 
     <TextView
         android:id="@+id/date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginEnd="39dp"
-        android:layout_marginRight="39dp"
-        android:layout_marginTop="64dp"
-        android:layout_toLeftOf="@+id/datevalue"
-        android:layout_toStartOf="@+id/datevalue"
+        android:layout_marginStart="58dp"
+        android:layout_marginLeft="58dp"
+        android:layout_marginTop="37dp"
         android:text="Date"
         android:textSize="25sp" />
 
@@ -54,10 +54,10 @@
         android:id="@+id/year"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/date"
+        android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/date"
-        android:layout_below="@+id/monthvalue"
-        android:layout_marginTop="25dp"
+        android:layout_alignLeft="@+id/date"
+        android:layout_marginTop="161dp"
         android:text="Year"
         android:textSize="25sp" />
 
@@ -69,6 +69,7 @@
         android:layout_alignLeft="@+id/monthvalue"
         android:layout_alignStart="@+id/monthvalue"
         android:ems="10"
+        android:hint="Enter the Date"
         android:inputType="number"
         android:maxLength="2" />
 
@@ -76,10 +77,11 @@
         android:id="@+id/monthvalue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/yearvalue"
+        android:layout_alignBottom="@+id/month"
         android:layout_alignStart="@+id/yearvalue"
-        android:layout_alignTop="@+id/month"
+        android:layout_alignLeft="@+id/yearvalue"
         android:ems="10"
+        android:hint="Enter the Month"
         android:inputType="number"
         android:maxLength="2" />
 
@@ -94,6 +96,7 @@
         android:layout_marginLeft="13dp"
         android:layout_marginStart="13dp"
         android:ems="10"
+        android:hint="Enter the Year"
         android:inputType="number"
         android:maxLength="4" />
 
@@ -103,7 +106,21 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="35dp"
+        android:layout_marginBottom="102dp"
         android:text="By Aakash Alagarsamy"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="20sp" />
+
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-9372606222251441/4870340119">
+    </com.google.android.gms.ads.AdView>
+
 </RelativeLayout>
