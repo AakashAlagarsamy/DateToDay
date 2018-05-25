@@ -1,126 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.aakash.datetoday.MainActivity">
-    <Button
-        android:id="@+id/calc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="210dp"
-        android:text="Result"
-        android:textSize="25sp" />
-
-    <TextView
-        android:id="@+id/day"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="147dp"
-        android:text="Day"
-        android:textColor="@color/black"
-        android:textSize="36sp" />
 
     <TextView
         android:id="@+id/date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="58dp"
-        android:layout_marginLeft="58dp"
-        android:layout_marginTop="37dp"
-        android:text="Date"
-        android:textSize="25sp" />
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="30dp"
+        android:text="Date     :"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
 
     <TextView
         android:id="@+id/month"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/date"
-        android:layout_alignRight="@+id/date"
-        android:layout_below="@+id/date"
-        android:layout_marginTop="29dp"
-        android:text="Month"
-        android:textSize="25sp" />
+        android:text="Month :"
+        android:textSize="20dp"
+        android:layout_marginLeft="-69dp"
+        android:layout_marginTop="90dp"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/year"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/date"
-        android:layout_alignLeft="@+id/date"
-        android:layout_marginTop="161dp"
-        android:text="Year"
-        android:textSize="25sp" />
+        android:text="Year   :"
+        android:textSize="20dp"
+        android:layout_marginLeft="-65dp"
+        android:layout_marginTop="150dp"
+        android:textColor="@color/black"
+        />
 
     <EditText
         android:id="@+id/datevalue"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
+        android:textSize="20dp"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/month"
-        android:layout_alignLeft="@+id/monthvalue"
-        android:layout_alignStart="@+id/monthvalue"
-        android:ems="10"
-        android:hint="Enter the Date"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="40dp"
         android:inputType="number"
-        android:maxLength="2" />
+        android:maxLength="2"
+        android:hint="Enter the Date"/>
 
     <EditText
         android:id="@+id/monthvalue"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
+        android:textSize="20dp"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/month"
-        android:layout_alignStart="@+id/yearvalue"
-        android:layout_alignLeft="@+id/yearvalue"
-        android:ems="10"
-        android:hint="Enter the Month"
+        android:layout_marginLeft="-200dp"
+        android:layout_marginTop="85dp"
         android:inputType="number"
-        android:maxLength="2" />
+        android:maxLength="2"
+        android:hint="Enter the Month"/>
 
     <EditText
         android:id="@+id/yearvalue"
+        android:layout_width="200dp"
+        android:textSize="20dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-200dp"
+        android:layout_marginTop="145dp"
+        android:inputType="number"
+        android:maxLength="4"
+        android:hint="Enter the Year"
+        />
+
+    <Button
+        android:id="@+id/calc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/year"
-        android:layout_alignBottom="@+id/year"
-        android:layout_alignLeft="@+id/calc"
-        android:layout_alignStart="@+id/calc"
-        android:layout_marginLeft="13dp"
-        android:layout_marginStart="13dp"
-        android:ems="10"
-        android:hint="Enter the Year"
-        android:inputType="number"
-        android:maxLength="4" />
+        android:text="RESULT"
+        android:layout_marginTop="230dp"
+        android:textSize="20dp"
+        android:layout_marginLeft="-200dp"/>
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:id="@+id/day"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="102dp"
+        android:text="      "
+        android:textSize="36dp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="-185dp"
+        android:layout_marginTop="300dp"
+        />
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
         android:text="By Aakash Alagarsamy"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="20sp" />
-
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="-270dp"
+        />
 
     <com.google.android.gms.ads.AdView
         xmlns:ads="http://schemas.android.com/apk/res-auto"
         android:id="@+id/adView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
         ads:adSize="BANNER"
+        android:layout_marginTop="461dp"
+        android:layout_marginLeft="-265dp"
         ads:adUnitId="ca-app-pub-9372606222251441/4870340119" >
     </com.google.android.gms.ads.AdView>
 
-</RelativeLayout>
+
+</LinearLayout>
